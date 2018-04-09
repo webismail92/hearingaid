@@ -338,23 +338,23 @@
           }
           return false;
           ">
-          <script type=text/javascript src=frm_validation.js></script>
+          <!-- <script type=text/javascript src=frm_validation.js></script> -->
           <ul>
             <li>
-              <input name=name type=text class=innerbox2 id=name placeholder="Enter Your Name..." required>
+              <input name=name type=text class=innerbox2 id=name placeholder="Enter Your Name..." required="required">
             </li>
             <li>
-              <input name=contacts type=text class=innerbox2 id=contacts placeholder="Enter Your Contact No..." required="" title="please enter 8 to 15 digits number"
+              <input name=contacts type=text class=innerbox2 id=contacts placeholder="Enter Your Contact No..." required="required" title="please enter 8 to 15 digits number"
                 pattern="[1-9][0-9]{7,14}" oninvalid="this.setCustomValidity('Please enter contact number')" oninput="setCustomValidity('')">
             </li>
             <li>
-              <input name=email type=email class=innerbox2 id=email placeholder="Enter Your Email Id..." required>
+              <input name=email type=email class=innerbox2 id=email placeholder="Enter Your Email Id..." required="required">
             </li>
             <li>
-              <input name=city type=text class=innerbox2 id=city placeholder="Enter Your City..." required>
+              <input name=city type=text class=innerbox2 id=city placeholder="Enter Your City..." required="required">
             </li>
             <li>
-              <input name=message class=innerbox2 id=message placeholder="Enter Your Requirement..." required>
+              <input name=message class=innerbox2 id=message placeholder="Enter Your Requirement..." required="required">
             </li>
             <li class=last>
               <div class="button-wrapper animated fadeIn">
