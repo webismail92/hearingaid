@@ -1,7 +1,7 @@
 <?php if(isset($_POST['name']) && isset($_POST['contacts']) && isset($_POST['email'])) {
 	
  
-    $email_to = 'contact@hearing-aids.co.in';
+    $email_to = 'ismailtiten@gmail.com';
     $name    = $_POST['name'];
     $email   = $_POST['email'];
     $contact = $_POST['contacts'];
