@@ -1,1 +1,63 @@
-function formvalid(){if("Enter Your Name..."==document.form1.name.value)return alert("Please Enter Your Name !"),document.form1.name.focus(),!1;if("Enter Your Contact No..."==document.form1.contacts.value)return alert("Please Enter Your Contact No.!"),document.form1.contacts.focus(),!1;if(isNaN(document.form1.contacts.value))return alert("Phone No. Should Be No.!"),document.form1.contacts.focus(),!1;var e=document.form1.email.value;if("Enter Your Email Id..."==e)return alert("Please enter email id"),document.form1.email.focus(),!1;if(-1==e.indexOf("@")){alert("Invalid email id check (@ or .'s)");var t=document.form1.email.length;return document.form1.email.select(0,t-1),document.form1.email.focus(),!1}if(-1==e.indexOf(".")){alert("Invalid email id check (@ or .'s)");var t=document.form1.email.length;return document.form1.email.select(0,t-1),document.form1.email.focus(),!1}if("Enter Your City..."==document.form1.city.value)return alert("Please Enter Your City !"),document.form1.city.focus(),!1;if("Enter Your Requirement..."==document.form1.message.value)return alert("Please Enter Your Requirement !"),document.form1.message.focus(),!1;var o=document.form1.contacts.value;return""==o?(alert("please Enter the Contact Number"),document.form1.contacts.focus(),!1):isNaN(o)?(alert("Enter the valid Mobile Number(Like : 9566137117)"),document.form1.contacts.focus(),!1):o.length<1||o.length>14?(alert("Please check your mobile number!"),document.form1.contacts.select(),!1):void 0}
+var form_being_submitted = false; // global variable
+
+  function checkForm(form)
+  {
+    if(form.name.value == "") {
+      alert("Please enter your name!");
+      form.name.focus();
+      return false;
+    }
+    if(form.contacts.value == "") {
+      alert("Please enter your contact number!");
+      form.contacts.focus();
+      return false;
+    }
+    var email=document.form1.email.value;
+		if(email=='')
+	{
+		alert('Please enter email id');
+		document.form1.email.focus();
+		return false;
+	}
+	else if(email.indexOf('@')==-1)
+	{
+		alert('Invalid email id check (@ or .\'s)');
+		var len=document.form1.email.length;
+		document.form1.email.select(0,len-1)
+		document.form1.email.focus();
+		return false;
+	}
+	else if(email.indexOf('.')==-1)
+	{
+		alert('Invalid email id check (@ or .\'s)');
+		var len=document.form1.email.length;
+		document.form1.email.select(0,len-1)
+		document.form1.email.focus();
+		return false;
+	}
+    if(form.city.value == "") {
+      alert("Please enter your city!");
+      form.city.focus();
+      return false;
+    }
+    if(form.message.value == "") {
+      alert("Please enter your query!");
+      form.message.focus();
+      return false;
+    }
+		var a = document.form1.contacts.value;
+		if(a=="")
+		{
+		alert("please Enter the Contact Number");
+		document.form1.contacts.focus();
+		return false;
+		}
+		if(isNaN(a))
+		{
+		alert("Enter the valid Mobile Number(Like : 9566137117)");
+		document.form1.contacts.focus();
+		return false;
+		}
+    return true;
+  }
+
